@@ -24,15 +24,6 @@ img {
   }
 }
 
-.navigation-clean .navbar-brand {
-  font-weight: bold;
-  color: inherit;
-}
-
-.navigation-clean .navbar-brand:hover {
-  color: #222;
-}
-
 .navigation-clean .navbar-collapse, .navigation-clean .navbar-form {
   border-top-color: #ddd;
 }
