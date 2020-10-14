@@ -82,3 +82,21 @@ def detailrating(request, rating):
         i += 1 
 
     return JsonResponse(response, safe=False)
+
+def detailpopularity(request, number):
+    i = 0
+    anime = Anime.objects.order_by('-members')[:number]
+    response = [{} for x in range(len(anime))]
+    while i < len(anime) :
+        response[i]["S. No."] = i+1 
+        response[i]["Anime ID"] = anime[i].anime_id
+        response[i]["Anime Name"] = anime[i].name
+        response[i]["Genre"] = anime[i].genre
+        response[i]["Anime Type"] = anime[i].animetype
+        response[i]["Episodes"] = anime[i].episodes
+        response[i]["Rating"] = anime[i].rating
+        response[i]["Members"] =  anime[i].members
+        response[i]["Mood"] = anime[i].mood
+        i += 1
+
+    return JsonResponse(response, safe=False)
