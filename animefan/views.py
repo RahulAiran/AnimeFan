@@ -1,30 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse , JsonResponse
+from django.http import HttpResponse
+from django.http import JsonResponse
 
 from .models import Anime
 
-from django.shortcuts import render 
-from rest_framework.views import APIView 
-from . models import *
-from rest_framework.response import Response 
-from . serializer import *
-# Create your views here. 
-  
-class ReactView(APIView): 
-    
-    serializer_class = ReactSerializer 
-  
-    # def get(self, request): 
-    #     detail = [ {"name": detail.name,"detail": detail.detail}  
-    #     for detail in Anime.objects.all()] 
-    #     return Response(detail) 
-  
-    # def post(self, request): 
-  
-    #     serializer = ReactSerializer(data=request.data) 
-    #     if serializer.is_valid(raise_exception=True): 
-    #         serializer.save() 
-    #         return  Response(serializer.data)
 # Create your views here.
 def index(request):
     return HttpResponse("Hello, world. You're at the animefan index.")
@@ -43,11 +22,14 @@ def detailanimeid(request, anime_id):
     response.write("Mood : %s <br>" % anime.mood)
 
     return HttpResponse(response)
+    
+    # return HttpResponse("You're looking at mood : %s" %anime.mood ) 
 
 def detailname(request, name):
-    i=0
-    name=name.title()
+    i = 0
+    name = name.title()
     anime = Anime.objects.filter(name__contains = name)
+
     response = [{} for x in range(len(anime))]
 
     while i < len(anime):
@@ -58,13 +40,11 @@ def detailname(request, name):
         response[i]["Anime Type"] = anime[i].animetype
         response[i]["Episodes"] = anime[i].episodes
         response[i]["Rating"] = anime[i].rating
-        response[i]["Members"] =  anime[i].members
+        response[i]["Members"] = anime[i].members
         response[i]["Mood"] = anime[i].mood
-        i+=1
+        i += 1
 
     return JsonResponse(response, safe=False)
-
-
 
 def detailmood(request, mood, number):
     i = 0
@@ -86,12 +66,10 @@ def detailmood(request, mood, number):
     return JsonResponse(response, safe=False)
 
 def detailrating(request, rating):
-    i=0
-    #name=name.title()
+    i = 0
     anime = Anime.objects.filter(rating__gte = rating)
     response = [{} for x in range(len(anime))]
-
-    while i < len(anime):
+    while i < len(anime) :
         response[i]["S. No."] = i+1 
         response[i]["Anime ID"] = anime[i].anime_id
         response[i]["Anime Name"] = anime[i].name
@@ -101,6 +79,6 @@ def detailrating(request, rating):
         response[i]["Rating"] = anime[i].rating
         response[i]["Members"] =  anime[i].members
         response[i]["Mood"] = anime[i].mood
-        i+=1
+        i += 1 
 
     return JsonResponse(response, safe=False)

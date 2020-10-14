@@ -7,7 +7,7 @@ import csv  # https://docs.python.org/3/library/csv.html
 from animefan.models import Anime
 
 def run():
-    fhand = open('animefan/anime.csv', encoding="utf8")
+    fhand = open('animefan/anime.csv')
     reader = csv.reader(fhand)
     next(reader)  # Advance past the header
 
