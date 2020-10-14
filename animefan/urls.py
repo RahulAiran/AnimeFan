@@ -11,5 +11,6 @@ urlpatterns = [
     path('mood-<str:mood>-<int:number>/', views.detailmood, name='detail'),
     path('rating-<int:rating>/', views.detailrating, name='detail'),
     path('rating-<float:rating>/', views.detailrating, name='detail'),
-    path('sort-by-popularity', views.detailpopularity, name='detail'),
+    path('popularity-<int:number>/', views.detailpopularity, name='detail'),
+    path('genre-<str:genre>-<int:number>/', views.detailgenre, name='detail'),
 ]
