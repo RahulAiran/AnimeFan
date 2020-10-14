@@ -7,7 +7,6 @@ from .models import Anime
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
-    # return HttpResponse("Hello, world. You're at the animefan index.")
 
 def detailanimeid(request, anime_id):
     anime = Anime.objects.get(anime_id = anime_id)
