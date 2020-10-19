@@ -13,11 +13,11 @@ div.jumbotron.hero-nature {
 }
 
 div.jumbotron.hero-photography {
-  background-image: url('../../assets/img/hero-background-photography.jpg');
+  background-image: url('../../assets/img/index/2ndbna.png');
 }
 
 div.jumbotron.hero-technology {
-  background-image: url('../../assets/img/hero-background-technology.jpg');
+  background-image: url('../../assets/img/index/3rddbz.png');
 }
 
 h1.hero-title, h2.hero-title, h3.hero-title {
@@ -26,6 +26,7 @@ h1.hero-title, h2.hero-title, h3.hero-title {
 }
 
 p.hero-subtitle {
+  font-size: larger;
   max-width: 600px;
   margin: 25px auto;
   padding: 10px 15px;
