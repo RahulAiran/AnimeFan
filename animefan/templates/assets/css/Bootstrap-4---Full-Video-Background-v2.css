@@ -39,7 +39,11 @@
 }
 
 .lead-mb-0 {
-  font-size: 20px;
+  font-size: min(18px, 4vw);
   font-family: 'Roboto';
+}
+
+.display-4 {
+  font-size: min(max(26px, 5vw), 60px);
 }
 
