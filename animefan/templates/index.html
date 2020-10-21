@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 
@@ -5,36 +7,36 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Home - Brand</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static '/bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Atma">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mr+De+Haviland">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="assets/fonts/material-icons.min.css">
-    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
-    <link rel="stylesheet" href="assets/css/Bold-BS4-CSS-Image-Slider.css">
-    <link rel="stylesheet" href="assets/css/Bold-BS4-Half-Page-Image-Slider-Header.css">
-    <link rel="stylesheet" href="assets/css/Bold-BS4-Image-Caption-Hover-Effect-5.css">
-    <link rel="stylesheet" href="assets/css/Bootstrap-4---Full-Video-Background-v2.css">
-    <link rel="stylesheet" href="assets/css/Carousel-Hero.css">
-    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
-    <link rel="stylesheet" href="assets/css/header-1.css">
-    <link rel="stylesheet" href="assets/css/header-2.css">
-    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="{% static '/fonts/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static '/fonts/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static '/fonts/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{% static '/fonts/material-icons.min.css' %}">
+    <link rel="stylesheet" href="{% static '/fonts/fontawesome5-overrides.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/Bold-BS4-CSS-Image-Slider.css' %}">
+    <link rel="stylesheet" href="{% static '/css/Bold-BS4-Half-Page-Image-Slider-Header.css' %}">
+    <link rel="stylesheet" href="{% static '/css/Bold-BS4-Image-Caption-Hover-Effect-5.css' %}">
+    <link rel="stylesheet" href="{% static '/css/Bootstrap-4---Full-Video-Background-v2.css' %}">
+    <link rel="stylesheet" href="{% static '/css/Carousel-Hero.css' %}">
+    <link rel="stylesheet" href="{% static '/css/Footer-Dark.css' %}">
+    <link rel="stylesheet" href="{% static '/css/header-1.css' %}">
+    <link rel="stylesheet" href="{% static '/css/header-2.css' %}">
+    <link rel="stylesheet" href="{% static '/css/header.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
-    <link rel="stylesheet" href="assets/css/Latest-Events.css">
-    <link rel="stylesheet" href="assets/css/News-Cards-4-Columns-v2.css">
-    <link rel="stylesheet" href="assets/css/Search-Input-Responsive-with-Icon.css">
-    <link rel="stylesheet" href="assets/css/Simple-Slider.css">
-    <link rel="stylesheet" href="assets/css/Team-Grid.css">
+    <link rel="stylesheet" href="{% static '/css/Latest-Events.css' %}">
+    <link rel="stylesheet" href="{% static '/css/News-Cards-4-Columns-v2.css' %}">
+    <link rel="stylesheet" href="{% static '/css/Search-Input-Responsive-with-Icon.css' %}">
+    <link rel="stylesheet" href="{% static '/css/Simple-Slider.css' %}">
+    <link rel="stylesheet" href="{% static '/css/Team-Grid.css' %}">
 </head>
 
-<body style="background: url(&quot;assets/img/3903032.jpg&quot;) center / cover no-repeat;">
+<body style="background: url(&quot;{% static '/img/3903032.jpg' %}&quot;) center / cover no-repeat;">
     <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean" style="padding: 10px;background: rgb(47,51,157);box-shadow: 0px 0px 20px rgb(0,0,0);">
         <div class="container-fluid">
             <div><a href="index.html" style="color: rgb(255,255,255);text-decoration: none;font-size: 33px;font-family: Atma, cursive;">Anime Fan</a></div><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
@@ -50,7 +52,7 @@
                                 class="nav-item d-flex d-lg-flex justify-content-center align-items-center justify-content-lg-center align-items-lg-center"><a class="nav-link d-flex d-xl-flex justify-content-center align-items-center align-items-xl-center" href="search.html" style="color: rgb(255,255,255);"><i class="fas fa-search" style="padding-right: 10px;font-size: 18px;"></i>Search</a></li>
                                 <li
                                     class="nav-item d-xl-flex align-items-xl-center"></li>
-                                    <li class="nav-item dropdown d-flex d-lg-flex justify-content-center align-items-center justify-content-lg-center align-items-lg-center"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" style="padding: 10px;color: rgb(255,255,255);" href="#">Andrew Stevens<img style="width:30px;height:30px;padding:0;margin-left:5px;" src="assets/img/andrew.jpg"></a>
+                                    <li class="nav-item dropdown d-flex d-lg-flex justify-content-center align-items-center justify-content-lg-center align-items-lg-center"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" style="padding: 10px;color: rgb(255,255,255);" href="#">Andrew Stevens<img style="width:30px;height:30px;padding:0;margin-left:5px;" src="{% static '/img/andrew.jpg' %}"></a>
                                         <div
                                             class="dropdown-menu"><a class="dropdown-item" href="#" style="padding-bottom: 6px;">My favourites</a><a class="dropdown-item" href="#">Logout <i class="fa fa-user-times" id="logouticon"></i></a></div>
         </li>
@@ -58,7 +60,7 @@
         </div>
         </div>
     </nav>
-    <section class="d-flex d-xl-flex justify-content-center align-items-center justify-content-xl-center align-items-xl-center" id="Banner" style="position: relative;opacity: 0.78;height: 500px;background: url(&quot;assets/img/back.png&quot;) bottom / cover no-repeat, rgba(255,255,255,0.22);margin-top: 2px;background-attachment: fixed;">
+    <section class="d-flex d-xl-flex justify-content-center align-items-center justify-content-xl-center align-items-xl-center" id="Banner" style="position: relative;opacity: 0.78;height: 500px;background: url(&quot;{% static '/img/back.png' %}&quot;) bottom / cover no-repeat, rgba(255,255,255,0.22);margin-top: 2px;background-attachment: fixed;">
         <div style="background: rgba(255,255,255,0.8);padding: 10px 50px;box-shadow: 0px 0px 10px;border-radius: 25px;margin: 0 2.725%;">
             <h1>Anime Fan</h1>
             <p style="color: rgb(0,0,0);font-size: 21px;text-shadow: 0px 0px 20px #f0f9ff;">We are just a group of weebs just trying to make your life easier! Hope you also drink Anime</p>
@@ -68,7 +70,7 @@
         <div class="row align-items-center" style="padding-top: 50px;">
             <div class="col-lg-6 order-lg-1">
                 <div class="d-flex justify-content-center align-items-center justify-content-xl-center align-items-xl-center p-5">
-                    <div class="rounded-circle" style="width: 380px;height: 380px;background: url(&quot;assets/img/index/anime%20industry.jpg&quot;) center / cover no-repeat;box-shadow: 0px 0px 10px;max-height: 400px;min-width: 380px;min-height: 380px;"></div>
+                    <div class="rounded-circle" style="width: 380px;height: 380px;background: url(&quot;{% static '/img/index/anime%20industry.jpg' %}&quot;) center / cover no-repeat;box-shadow: 0px 0px 10px;max-height: 400px;min-width: 380px;min-height: 380px;"></div>
                 </div>
             </div>
             <div class="col-lg-6 order-lg-2">
@@ -164,7 +166,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 d-lg-flex justify-content-lg-center align-items-lg-center order-lg-2" style="padding: 40px 15px;">
-                <div data-bs-hover-animate="pulse" class="p-5" style="background: url(&quot;assets/img/index/us-anime-market.png&quot;) center / contain no-repeat, #ffffff;box-shadow: 0px 0px 10px #f0f9ff;border-radius: 20px;width: 100%;height: 100%;min-height: 300px;"></div>
+                <div data-bs-hover-animate="pulse" class="p-5" style="background: url(&quot;{% static '/img/index/us-anime-market.png' %}&quot;) center / contain no-repeat, #ffffff;box-shadow: 0px 0px 10px #f0f9ff;border-radius: 20px;width: 100%;height: 100%;min-height: 300px;"></div>
             </div>
             <div class="col-lg-6 order-lg-1" style="padding: 40px 15px;">
                 <div class="p-5" style="background: #f0f9ff;border-radius: 19px;height: auto;box-shadow: 0px 0px 10px #f0f9ff;">
@@ -178,7 +180,7 @@
     <div class="container" style="margin-bottom: 50px;">
         <div class="row">
             <div class="col-md-6 mb-lg-0" style="padding: 10px;">
-                <div class="hover hover-5 text-white rounded"><img src="assets/img/index/spirited%20away.webp" alt="image">
+                <div class="hover hover-5 text-white rounded"><img src="{% static '/img/index/spirited%20away.webp' %}" alt="image">
                     <div class="hover-overlay"></div>
                     <div class="hover-5-content">
                         <h4 class="text-uppercase hover-5-title font-weight-light mb-0" style="font-weight: bold;"><strong class="font-weight-bold text-white">&nbsp;</strong><span class="font-weight-light"><br>SPIRITED AWAY WAS THE FIRST ANIME FILM TO BE NOMINATED FOR AND WIN AN ACADEMY AWARD.<br><br></span>&nbsp;</h4>
@@ -187,7 +189,7 @@
                 </div>
             </div>
             <div class="col-md-6 mb-lg-0" style="padding: 10px;">
-                <div class="hover hover-5 text-white rounded"><img src="assets/img/index/akira-photo-u11.webp" alt="image" width="460px" height="400px">
+                <div class="hover hover-5 text-white rounded"><img src="{% static '/img/index/akira-photo-u11.webp' %}" alt="image" width="460px" height="400px">
                     <div class="hover-overlay"></div>
                     <div class="hover-5-content">
                         <h3 class="text-uppercase hover-5-title font-weight-light mb-0" style="font-weight: bold;">&nbsp;<strong class="font-weight-bold text-white">&nbsp;</strong><span class="font-weight-light"><br>FIFTY NEW COLORS WERE CREATED FOR AKIRA.<br><br></span>&nbsp;</h3>
@@ -234,11 +236,11 @@
         <div class="col item social"><a href="#"><i class="icon ion-social-github"></i></a><a href="#"><i class="fa fa-envelope-o"></i></a><a href="#"><i class="icon ion-social-linkedin"></i></a></div>
         <p class="copyright">Anime Fan © 2020</p>
     </div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/bs-init.js"></script>
+    <script src="{% static '/js/jquery.min.js' %}"></script>
+    <script src="{% static '/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static '/js/bs-init.js' %}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
-    <script src="assets/js/Simple-Slider.js"></script>
+    <script src="{% static '/js/Simple-Slider.js' %}"></script>
 </body>
 
 </html>
