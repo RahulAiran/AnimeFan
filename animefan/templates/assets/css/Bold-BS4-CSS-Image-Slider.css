@@ -45,29 +45,62 @@
 
 .jumbotron.hero-naruto.carousel-hero {
   background-image: url('../../assets/img/index/4thnaruto.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
 }
 
 .jumbotron.hero-Armin.carousel-hero {
   background-image: url('../../assets/img/index/5thaot.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
 }
 
 .jumbotron.hero-Ichigo.carousel-hero {
   background-image: url('../../assets/img/index/6thbleach.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
 }
 
 .jumbotron.hero-Monkey.carousel-hero {
   background-image: url('../../assets/img/index/7thonepiece.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
 }
 
 .jumbotron.hero-Natsu.carousel-hero {
   background-image: url('../../assets/img/index/8thfairytail.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
 }
 
 .jumbotron.hero-Saitama.carousel-hero {
   background-image: url('../../assets/img/index/9thopm.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
 }
 
 .jumbotron.hero-RoyMustang.carousel-hero {
   background-image: url('../../assets/img/index/10thfmb.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
+
+.Tribute-Image:hover {
+  transform: scale(1.08);
+  transition: all 0.2s ease-in;
 }
 
