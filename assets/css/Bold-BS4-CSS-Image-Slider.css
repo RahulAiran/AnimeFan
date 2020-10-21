@@ -71,8 +71,8 @@
   background-image: url('../../assets/img/index/10thfmb.jpg');
 }
 
-#background-image-tribute:hover {
-  transform: scale(1.1);
+.Tribute-Image:hover {
+  transform: scale(1.08);
   transition: all 0.2s ease-in;
 }
 
