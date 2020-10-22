@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 
@@ -37,17 +39,17 @@
 <body>
     <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean" style="padding: 10px;background: rgb(47,51,157);box-shadow: 0px 0px 20px rgb(0,0,0);">
         <div class="container-fluid">
-            <div><a href="index.html" style="color: rgb(255,255,255);text-decoration: none;font-size: 33px;font-family: Atma, cursive;">Anime Fan</a></div><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div><a href="/animefan" style="color: rgb(255,255,255);text-decoration: none;font-size: 33px;font-family: Atma, cursive;">Anime Fan</a></div><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div
                 class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item d-flex d-xl-flex align-items-center align-items-xl-center"><a class="nav-link d-flex d-xl-flex align-items-center align-items-xl-center" href="index.html" style="color: rgb(255,255,255);"><i class="fa fa-home d-flex align-items-center" style="padding-right: 10px;font-size: 18px;"></i>Home&nbsp;</a></li>
+                    <li class="nav-item d-flex d-xl-flex align-items-center align-items-xl-center"><a class="nav-link d-flex d-xl-flex align-items-center align-items-xl-center" href="/animefan" style="color: rgb(255,255,255);"><i class="fa fa-home d-flex align-items-center" style="padding-right: 10px;font-size: 18px;"></i>Home&nbsp;</a></li>
                     <li
-                        class="nav-item d-flex d-xl-flex align-items-center align-items-xl-center"><a class="nav-link d-flex d-xl-flex align-items-center align-items-xl-center" href="about.html" style="color: rgb(255,255,255);"><i class="fas fa-info d-flex align-items-center" style="padding-right: 10px;"></i>About Us<br></a></li>
+                        class="nav-item d-flex d-xl-flex align-items-center align-items-xl-center"><a class="nav-link d-flex d-xl-flex align-items-center align-items-xl-center" href="/animefan/about" style="color: rgb(255,255,255);"><i class="fas fa-info d-flex align-items-center" style="padding-right: 10px;"></i>About Us<br></a></li>
                         <li
-                            class="nav-item d-flex d-xl-flex align-items-center align-items-xl-center"><a class="nav-link d-flex d-xl-flex align-items-center align-items-xl-center" href="tribute.html" style="color: rgb(255,255,255);"><i class="material-icons d-flex align-items-center" style="padding-right: 10px;font-size: 18px;">description</i>Tribute</a></li>
+                            class="nav-item d-flex d-xl-flex align-items-center align-items-xl-center"><a class="nav-link d-flex d-xl-flex align-items-center align-items-xl-center" href="/animefan/tribute" style="color: rgb(255,255,255);"><i class="material-icons d-flex align-items-center" style="padding-right: 10px;font-size: 18px;">description</i>Tribute</a></li>
                             <li
-                                class="nav-item d-flex d-xl-flex align-items-center align-items-xl-center"><a class="nav-link d-flex d-xl-flex align-items-center align-items-xl-center" href="search.html" style="color: rgb(255,255,255);"><i class="fas fa-search" style="padding-right: 10px;font-size: 18px;"></i>Search</a></li>
+                                class="nav-item d-flex d-xl-flex align-items-center align-items-xl-center"><a class="nav-link d-flex d-xl-flex align-items-center align-items-xl-center" href="/animefan/search" style="color: rgb(255,255,255);"><i class="fas fa-search" style="padding-right: 10px;font-size: 18px;"></i>Search</a></li>
                                 <li
                                     class="nav-item d-xl-flex align-items-xl-center"></li>
                                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" style="padding: 10px;color: rgb(255,255,255);" href="#">Andrew Stevens<img style="width:30px;height:30px;padding:0;margin-left:5px;" src="{% static '/img/andrew.jpg' %}"></a>
@@ -211,10 +213,10 @@
                     <div class="col-sm-6 col-md-3 item">
                         <h3>Links</h3>
                         <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="tribute.html">Tribute</a></li>
-                            <li><a href="search.html">Search</a></li>
+                            <li><a href="/animefan">Home</a></li>
+                            <li><a href="/animefan/about">About Us</a></li>
+                            <li><a href="/animefan/tribute">Tribute</a></li>
+                            <li><a href="/animefan/search">Search</a></li>
                         </ul>
                     </div>
                     <div class="col-md-6 item text">
