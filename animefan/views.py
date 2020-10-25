@@ -25,16 +25,16 @@ class search(View):
     template_name = "search.html"
 
     def get(self, request):
-        return render(request, self.template_name, {'hidden': True})
+        return render(request, self.template_name, {'hidden': True, 'query': 'NULL'})
 
     def post(self, request):
         # import pdb; pdb.set_trace()
         query = self.request.POST.get('searchbar', None)
         response = detailname(request, query, 'WEB')
         if query == "":
-            return render(request, self.template_name, {'hidden': True, 'no_search': True})
+            return render(request, self.template_name, {'hidden': True, 'no_search': True, 'query': 'NULL'})
         else:
-            return render(request, self.template_name, {'response': response, 'hidden': False})
+            return render(request, self.template_name, {'response': response, 'hidden': False, 'query': query})
 
 class popularity(View):
     template_name = "search.html"
@@ -42,21 +42,21 @@ class popularity(View):
     def get(self, request, number):
         # import pdb; pdb.set_trace()
         response = detailpopularity(request, number, 'WEB')
-        return render(request, self.template_name, {'response': response, 'hidden': False})
+        return render(request, self.template_name, {'response': response, 'hidden': False, 'query': 'NULL'})
 
 class rating(View):
     template_name = "search.html"
 
     def get(self, request, number):
         response = toprated(request, number, 'WEB')
-        return render(request, self.template_name, {'response': response, 'hidden': False})
+        return render(request, self.template_name, {'response': response, 'hidden': False, 'query': 'NULL'})
 
 class mood(View):
     template_name = "search.html"
 
     def get(self, request, mood, number):
         response = detailmood(request, mood, number, 'WEB')
-        return render(request, self.template_name, {'response': response, 'hidden': False})
+        return render(request, self.template_name, {'response': response, 'hidden': False, 'query': 'NULL'})
 
 def detailanimeid(request, anime_id, options='NULL'):
     i = 0
@@ -80,7 +80,7 @@ def detailanimeid(request, anime_id, options='NULL'):
     
     # return HttpResponse("You're looking at mood : %s" %anime.mood ) 
 
-def detailname(request, name, options ='NULL'):
+def detailname(request, name, options='NULL'):
     i = 0
     result = []
     name = name.title()
