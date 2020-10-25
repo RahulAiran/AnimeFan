@@ -31,7 +31,10 @@ class search(View):
         # import pdb; pdb.set_trace()
         query = self.request.POST.get('searchbar', None)
         response = detailname(request, query, 'WEB')
-        return render(request, self.template_name, {'response': response, 'hidden': False})
+        if query == "":
+            return render(request, self.template_name, {'hidden': True, 'no_search': True})
+        else:
+            return render(request, self.template_name, {'response': response, 'hidden': False})
 
 class popularity(View):
     template_name = "search.html"

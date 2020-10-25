@@ -71,7 +71,7 @@
             <div class="col-auto col-md-10 offset-md-1 align-self-start">
                 <div class="card m-auto" style="max-width: 85%;">
                     <div class="card-body">
-                        <form class="d-flex align-items-start align-items-sm-center" method="post" >
+                        <form class="d-flex align-items-start align-items-sm-center" method="post" action="{% url 'search' %}">
                             {% csrf_token %}
                             <i class="fas fa-search d-none d-sm-block h4 text-body m-0"></i>
                             <input class="form-control form-control-lg flex-shrink-1 form-control-borderless" type="search" placeholder="Search" name="searchbar" style="margin-left: 5px;border-width: 1px;border-style: solid;margin-right: 5px;">
@@ -138,6 +138,11 @@
         </div>
     </div>
     </div>
+    {% if no_search == True %}
+        <dir class="container d-flex d-xl-flex justify-content-center align-items-center justify-content-xl-center align-items-xl-center">
+            <h2>Blank Searches are Not Supported yet!</h2>
+        </dir>
+    {% endif %}
     {% if hidden == False %}
     <div class=container>
         <table style="width:100">

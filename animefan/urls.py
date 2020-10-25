@@ -12,7 +12,7 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('tribute/', views.tribute, name='tribute'),
     path('search/',  search.as_view(), name='search'),
-    url(r'^$', search.as_view(), name='search'),
+    # url(r'^$', search.as_view(), name='search'),
     path('filter/popularity-<int:number>/',  popularity.as_view(), name='popularity'),
     path('filter/rating-<int:number>/', rating.as_view(), name='rating'),
 
