@@ -78,16 +78,24 @@
                             <div
                                 class="form-row">
                                 <div class="col d-flex justify-content-center" style="padding-bottom: 5px;">
-                                    <button class="btn btn-success btn-lg" type="submit" style="border-radius: 20px;" action='/search'>Search</button>
+                                    <button class="btn btn-success btn-lg" type="submit" style="border-radius: 20px;" action=''>Search</button>
                                 </div>
                                 <div class="col d-flex justify-content-center">
                                     <div class="dropdown"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="height: 48px;background: rgb(48,52,157);box-shadow: 0px 0px;border-radius: 20px;">More&nbsp;</button>
                                         <div
-                                            class="dropdown-menu"><a class="dropdown-item" href="#">Popularity</a>
+                                            class="dropdown-menu"><a class="dropdown-item" href="/animefan/filter/popularity-1">Popularity</a>
                                             <div class="dropdown-divider"></div>
-                                            <h6 class="dropdown-header">Mood</h6><a class="dropdown-item" href="#">Menu Item</a><a class="dropdown-item" href="#">Menu Item</a><a class="dropdown-item" href="#">Menu Item</a><a class="dropdown-item" href="#">Menu Item</a><a class="dropdown-item"
-                                                href="#">Menu Item</a>
-                                            <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Rating</a></div>
+                                            <h6 class="dropdown-header">Mood</h6>
+                                                <a class="dropdown-item" href="/animefan/filter/mood-happy-1">Happy</a>
+                                                <a class="dropdown-item" href="/animefan/fi;ter/mood-sad-1">Sad</a>
+                                                <a class="dropdown-item" href="/animefan/filter/mood-cheerful-1">Cheerful</a>
+                                                <a class="dropdown-item" href="/animefan/filter/mood-Energetic-1">Energetic</a>
+                                                <a class="dropdown-item" href="/animefan/filter/mood-Sporty-1">Sporty</a>
+                                                <a class="dropdown-item" href="/animefan/filter/mood-romantic-1">Romantic</a>
+                                                <a class="dropdown-item" href="/animefan/filter/mood-Calm-1">Calm</a>
+                                                <a class="dropdown-item" href="/animefan/filter/mood-Excited-1">Excited</a>
+                                                <a class="dropdown-item" href="/animefan/filter/mood-Smart-1">Smart</a>
+                                            <div class="dropdown-divider"></div><a class="dropdown-item" href="/animefan/filter/rating-1">Rating</a></div>
                                 </div>
                     </div>
                 </div>
@@ -130,6 +138,7 @@
         </div>
     </div>
     </div>
+    {% if hidden == False %}
     <div class=container>
         <table style="width:100">
         <tr>
@@ -155,8 +164,8 @@
             </tr>
         {% endfor %}
         </table>
-        </ul>
     </div>
+    {% endif %}
     </div>
     <div class="blog-home2 py-5">
   <div class="container">
