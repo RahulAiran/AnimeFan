@@ -34,6 +34,8 @@
     <link rel="stylesheet" href="{% static '/css/Search-Input-Responsive-with-Icon.css' %}">
     <link rel="stylesheet" href="{% static '/css/Simple-Slider.css' %}">
     <link rel="stylesheet" href="{% static '/css/Team-Grid.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static '/css/pagination_green.css' %}">
 </head>
 
 <body>
@@ -85,20 +87,20 @@
                                 </div>
                                 <div class="col d-flex justify-content-center">
                                     <div class="dropdown"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="height: 48px;background: rgb(48,52,157);box-shadow: 0px 0px;border-radius: 20px;">More&nbsp;</button>
-                                        <div class="dropdown-menu"><a class="dropdown-item" href="/animefan/filter/popularity-1">Popularity</a>
+                                        <div class="dropdown-menu"><a class="dropdown-item" href="/animefan/filter/popularity">Popularity</a>
                                             <div class="dropdown-divider"></div>
                                             <h6 class="dropdown-header">Mood</h6>
-                                                <a class="dropdown-item" href="/animefan/filter/mood-happy-1">Happy</a>
-                                                <a class="dropdown-item" href="/animefan/fi;ter/mood-sad-1">Sad</a>
-                                                <a class="dropdown-item" href="/animefan/filter/mood-cheerful-1">Cheerful</a>
-                                                <a class="dropdown-item" href="/animefan/filter/mood-Energetic-1">Energetic</a>
-                                                <a class="dropdown-item" href="/animefan/filter/mood-Sporty-1">Sporty</a>
-                                                <a class="dropdown-item" href="/animefan/filter/mood-romantic-1">Romantic</a>
-                                                <a class="dropdown-item" href="/animefan/filter/mood-Calm-1">Calm</a>
-                                                <a class="dropdown-item" href="/animefan/filter/mood-Excited-1">Excited</a>
-                                                <a class="dropdown-item" href="/animefan/filter/mood-Smart-1">Smart</a>
+                                                <a class="dropdown-item" href="/animefan/filter/mood-happy">Happy</a>
+                                                <a class="dropdown-item" href="/animefan/filter/mood-sad">Sad</a>
+                                                <a class="dropdown-item" href="/animefan/filter/mood-cheerful">Cheerful</a>
+                                                <a class="dropdown-item" href="/animefan/filter/mood-Energetic">Energetic</a>
+                                                <a class="dropdown-item" href="/animefan/filter/mood-Sporty">Sporty</a>
+                                                <a class="dropdown-item" href="/animefan/filter/mood-romantic">Romantic</a>
+                                                <a class="dropdown-item" href="/animefan/filter/mood-Calm">Calm</a>
+                                                <a class="dropdown-item" href="/animefan/filter/mood-Excited">Excited</a>
+                                                <a class="dropdown-item" href="/animefan/filter/mood-Smart">Smart</a>
                                             <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="/animefan/filter/rating-1">Rating</a>
+                                            <a class="dropdown-item" href="/animefan/filter/rating">Rating</a>
                                         </div>
                                     </div>
                                 </div>
@@ -108,44 +110,39 @@
                 </div>
             </div>
         <div class="col" style="padding: 25px;">
+        <div class="container d-flex d-xl-flex justify-content-center align-items-center justify-content-xl-center align-items-xl-center">
+            <h2>Genre</h2>
+        </div>
         <div class="container-fluid" style="text-align: center;">
             <div class="row row-cols-2">
-                <div class="col-md-3">
-                    <a href="#">Fighting&nbsp;</a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#">Link</a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#">Link</a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#">Link</a>
-                </div>
+                <div class="col-md-3"><a href="/animefan/filter/genre-action">Action</a></div>
+                <div class="col-md-3"><a href="/animefan/filter/genre-adventure">Adventure</a></div>
+                <div class="col-md-3"><a href="/animefan/filter/genre-comedy">Comedy</a></div>
+                <div class="col-md-3"><a href="/animefan/filter/genre-drama">Drama</a></div>
             </div>
             <div class="row row-cols-2">
-                <div class="col-md-3"><a href="#">Fighting&nbsp;</a></div>
-                <div class="col-md-3"><a href="#">Link</a></div>
-                <div class="col-md-3"><a href="#">Link</a></div>
-                <div class="col-md-3"><a href="#">Link</a></div>
+                <div class="col-md-3"><a href="/animefan/filter/genre-fantasy">Fantasy</a></div>
+                <div class="col-md-3"><a href="/animefan/filter/genre-horror">Horror</a></div>
+                <div class="col-md-3"><a href="/animefan/filter/genre-magic">Magic</a></div>
+                <div class="col-md-3"><a href="/animefan/filter/genre-mecha">Mecha</a></div>
             </div>
             <div class="row row-cols-2">
-                <div class="col-md-3"><a href="#">Fighting&nbsp;</a></div>
-                <div class="col-md-3"><a href="#">Link</a></div>
-                <div class="col-md-3"><a href="#">Link</a></div>
-                <div class="col-md-3"><a href="#">Link</a></div>
+                <div class="col-md-3"><a href="/animefan/filter/genre-mystery">Mystery</a></div>
+                <div class="col-md-3"><a href="/animefan/filter/genre-romance">Romance</a></div>
+                <div class="col-md-3"><a href="/animefan/filter/genre-school">School</a></div>
+                <div class="col-md-3"><a href="/animefan/filter/genre-Sci-FI">Sci-fi</a></div>
             </div>
             <div class="row row-cols-2">
-                <div class="col-md-3"><a href="#">Fighting&nbsp;</a></div>
-                <div class="col-md-3"><a href="#">Link</a></div>
-                <div class="col-md-3"><a href="#">Link</a></div>
-                <div class="col-md-3"><a href="#">Link</a></div>
+                <div class="col-md-3"><a href="/animefan/filter/genre-seinen">Seinen</a></div>
+                <div class="col-md-3"><a href="/animefan/filter/genre-shoujo">Shoujo</a></div>
+                <div class="col-md-3"><a href="/animefan/filter/genre-shounen">Shounen</a></div>
+                <div class="col-md-3"><a href="/animefan/filter/genre-slice of life">Slice of Life</a></div>
             </div>
             <div class="row row-cols-2">
-                <div class="col-md-3"><a href="#">Fighting&nbsp;</a></div>
-                <div class="col-md-3"><a href="#">Link</a></div>
-                <div class="col-md-3"><a href="#">Link</a></div>
-                <div class="col-md-3"><a href="#">Link</a></div>
+                <div class="col-md-3"><a href="/animefan/filter/genre-sports">Sports</a></div>
+                <div class="col-md-3"><a href="/animefan/filter/genre-super power">Super Power</a></div>
+                <div class="col-md-3"><a href="/animefan/filter/genre-supernatural">Supernatural</a></div>
+                <div class="col-md-3"><a href="/animefan/filter/genre-thriller">Thriller</a></div>
             </div>
         </div>
     </div>
@@ -155,7 +152,9 @@
             <h2>Blank Searches are Not Supported yet!</h2>
         </dir>
     {% endif %}
+
     {% if hidden == False %}
+
     <div class=container>
         {% comment %} <table >
         <tr>
@@ -196,10 +195,33 @@
         </table>
     </div>
 
-    <div class="table-button">
+    <div class="pagination d-flex d-xl-flex justify-content-center align-items-center justify-content-xl-center align-items-xl-center">
+        {% if response.has_previous %}
+        <a class="pagination-action" href="?page=1">
+            <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+        </a>
+        <a class="pagination-action" href="?page={{ response.previous_page_number }}">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+        </a>
+        {% endif %}
+        <span class="pagination-current">{{ response.number }}</span>
+        <span class="pagination-of">of</span>
+        <span class="pagination-total">{{ response.paginator.num_pages }}</span>
+
+        {% if response.has_next %}
+            <a class="pagination-action" href="?page={{ response.next_page_number }}">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </a>
+            <a class="pagination-action" href="?page={{ response.paginator.num_pages }}">
+                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            </a>
+        {% endif %}
+    </div>
+
+    {% comment %} <div class="table-button">
         <a class="btn btn-info button" href="#" role="button">Previous</a>
         <a class="btn btn-primary button" href="#" role="button">Next</a>
-    </div>
+    </div> {% endcomment %}
   
     {% endif %}
     </div>

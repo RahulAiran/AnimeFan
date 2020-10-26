@@ -1,7 +1,9 @@
 # from django.http import request
 from pdb import set_trace
+from django.db.models import query
 from django.http import response
 from django.shortcuts import render
+from django.core.paginator import Paginator
 # from django.http import HttpResponse
 # import requests
 from django.http import JsonResponse
@@ -31,6 +33,7 @@ class search(View):
         # import pdb; pdb.set_trace()
         query = self.request.POST.get('searchbar', None)
         response = detailname(request, query, 'WEB')
+
         if query == "":
             return render(request, self.template_name, {'hidden': True, 'no_search': True, 'query': 'NULL'})
         else:
@@ -39,23 +42,47 @@ class search(View):
 class popularity(View):
     template_name = "search.html"
 
-    def get(self, request, number):
+    def get(self, request):
         # import pdb; pdb.set_trace()
-        response = detailpopularity(request, number, 'WEB')
+        tmpresponse = detailpopularity(request, 'WEB')
+        
+        paginator = Paginator(tmpresponse, 30)
+        page_number = request.GET.get('page')
+        response = paginator.get_page(page_number)
+
         return render(request, self.template_name, {'response': response, 'hidden': False, 'query': 'NULL'})
 
 class rating(View):
     template_name = "search.html"
 
-    def get(self, request, number):
-        response = toprated(request, number, 'WEB')
+    def get(self, request):
+        tmpresponse = toprated(request, 'WEB')
+        paginator = Paginator(tmpresponse, 30)
+        page_number = request.GET.get('page')
+        response = paginator.get_page(page_number)
+
         return render(request, self.template_name, {'response': response, 'hidden': False, 'query': 'NULL'})
 
 class mood(View):
     template_name = "search.html"
 
-    def get(self, request, mood, number):
-        response = detailmood(request, mood, number, 'WEB')
+    def get(self, request, mood):
+        tmpresponse = detailmood(request, mood, 'WEB')
+        paginator = Paginator(tmpresponse, 30)
+        page_number = request.GET.get('page')
+        response = paginator.get_page(page_number)
+
+        return render(request, self.template_name, {'response': response, 'hidden': False, 'query': 'NULL'})
+
+class genre(View):
+    template_name = "search.html"
+
+    def get(self, request, genre):
+        tmpresponse = detailgenre(request, genre, 'WEB')
+        paginator = Paginator(tmpresponse, 30)
+        page_number = request.GET.get('page')
+        response = paginator.get_page(page_number)
+
         return render(request, self.template_name, {'response': response, 'hidden': False, 'query': 'NULL'})
 
 def detailanimeid(request, anime_id, options='NULL'):
@@ -110,12 +137,11 @@ def detailname(request, name, options='NULL'):
     else:
         return result
 
-def detailmood(request, mood, number, options='NULL'):
+def detailmood(request, mood, options='NULL'):
     i = 0
     result = []
-    number = (number-1) * 50
     mood = mood.title()
-    animes = Anime.objects.filter(mood = mood)[number:number+50]
+    animes = Anime.objects.filter(mood = mood)
     
     for anime in animes:
         response = {
@@ -137,11 +163,10 @@ def detailmood(request, mood, number, options='NULL'):
     else:
         return result
 
-def detailrating(request, rating, number, options='NULL'):
+def detailrating(request, rating, options='NULL'):
     i = 0
     result = []
-    number = (number-1) * 50
-    animes = Anime.objects.filter(rating__gte = rating)[number:number+50]
+    animes = Anime.objects.filter(rating__gte = rating)
     
     for anime in animes:
         response = {
@@ -163,11 +188,10 @@ def detailrating(request, rating, number, options='NULL'):
     else:
         return result
 
-def toprated(request, number, options='NULL'):
+def toprated(request, options='NULL'):
     i = 0
     result = []
-    number = (number-1) * 50
-    animes = Anime.objects.order_by('-rating')[number:number+50]
+    animes = Anime.objects.order_by('-rating')
     
     for anime in animes:
         response = {
@@ -189,11 +213,10 @@ def toprated(request, number, options='NULL'):
     else:
         return result
 
-def detailpopularity(request, number, options='NULL'):
+def detailpopularity(request, options='NULL'):
     i = 0
     result = []
-    number = (number-1) * 50
-    animes = Anime.objects.order_by('-members')[number:number+50]
+    animes = Anime.objects.order_by('-members')
     
     for anime in animes:
         response = {
@@ -215,25 +238,28 @@ def detailpopularity(request, number, options='NULL'):
     else:
         return result
 
-def detailgenre(request, genre, number, options='NULL'):
+def detailgenre(request, genre, options='NULL'):
     i = 0
+    result = []
     genre = genre.title()
-    anime = Anime.objects.filter(genre = genre)
-    response = [{} for x in range(number)]
+    animes = Anime.objects.filter(genre__contains = genre)
     
-    while i < number :
-        response[i]["SNo"] = i+1
-        response[i]["AnimeID"] = anime[i].anime_id
-        response[i]["AnimeName"] = anime[i].name
-        response[i]["Genre"] = anime[i].genre
-        response[i]["AnimeType"] = anime[i].animetype
-        response[i]["Episodes"] = anime[i].episodes
-        response[i]["Rating"] = anime[i].rating
-        response[i]["Members"] =  anime[i].members
-        response[i]["Mood"] = anime[i].mood
-        i += 1
+    for anime in animes:
+        response = {
+            'SNo' : i+1,
+            'AnimeID' : anime.anime_id,
+            'AnimeName' :  anime.name,
+            'Genre' : anime.genre, 
+            'AnimeType' : anime.animetype,
+            'Episodes' : anime.episodes,
+            'Rating' : anime.rating,
+            'Members' : anime.members,
+            'Mood': anime.mood
+        }
+        i+=1
+        result.append(response) 
 
     if options == 'NULL':
-        return JsonResponse(response, safe=False)
+        return JsonResponse(result, safe=False)
     else:
-        return render(request, "search.html", {'response': response, 'hidden': False})
+        return result
