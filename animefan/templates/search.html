@@ -157,7 +157,7 @@
     {% endif %}
     {% if hidden == False %}
     <div class=container>
-        <table style="width:100">
+        {% comment %} <table >
         <tr>
             <th>S. No.</th>
             <th>Anime Name</th>
@@ -167,7 +167,20 @@
             <th>Rating</th>
             <th>Members</th>
             <th>Mood</th>
-        </tr>
+        </tr> {% endcomment %}
+        <table class="table table-bordered table-hover" style="width:100">
+                <thead class="anime-header cs">
+                    <tr>
+                        <th id="trs-hd" class="col-lg-0">S. No.</th>
+                        <th id="trs-hd" class="col-lg-2">Anime Name</th>
+                        <th id="trs-hd" class="col-lg-3">Genre</th>
+                        <th id="trs-hd" class="col-lg-2">Anime Type</th>
+                        <th id="trs-hd" class="col-lg-2">Episodes</th>
+                        <th id="trs-hd" class="col-lg-2">Rating</th>
+                        <th id="trs-hd" class="col-lg-2">Members</th>
+                        <th id="trs-hd" class="col-lg-2">Mood</th>
+                    </tr>
+                    </thead>
         {% for i in response %}
             <tr>
                 <th>{{ i.SNo }}</th>

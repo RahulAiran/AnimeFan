@@ -97,3 +97,16 @@
   opacity: 1;
 }
 
+#trs-hd {
+  text-align: center;
+}
+
+.anime-header {
+  font-size: 12px;
+  text-align: center;
+}
+
+.anime-header.cs {
+  background-color: rgba(37,71,106,0.56);
+  color: #fff;
+}
