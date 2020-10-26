@@ -110,3 +110,13 @@
   background-color: rgba(37,71,106,0.56);
   color: #fff;
 }
+
+.table-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button{
+  margin: 12px;
+}
