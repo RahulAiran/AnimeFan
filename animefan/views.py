@@ -263,3 +263,9 @@ def detailgenre(request, genre, options='NULL'):
         return JsonResponse(result, safe=False)
     else:
         return result
+
+from django.shortcuts import redirect
+
+def view_404(request, exception=None):
+    # redirect to homepage
+    return redirect('/animefan')

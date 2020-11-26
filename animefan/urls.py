@@ -25,4 +25,6 @@ urlpatterns = [
     path('rating-<float:rating>/', views.detailrating, name='JSON'),
     path('popularity', views.detailpopularity, name='JSON'),
     path('genre-<str:genre>', views.detailgenre, name='JSON'),
+
+    url(r'^.*/$', views.view_404),
 ]
