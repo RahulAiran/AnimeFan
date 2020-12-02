@@ -87,6 +87,7 @@ class genre(View):
 
 def detailanimeid(request, anime_id, options='NULL'):
     i = 0
+    result = []
     anime = Anime.objects.get(anime_id = int(anime_id))
     response = {
         'SNo' : i+1,
@@ -99,11 +100,13 @@ def detailanimeid(request, anime_id, options='NULL'):
         'Members' : anime.members,
         'Mood': anime.mood
     }
+    result.append(response)
+
     # return response
     if options == 'NULL':
-        return JsonResponse(response, safe=False)
+        return JsonResponse(result, safe=False)
     else:
-        return response
+        return result
     
     # return HttpResponse("You're looking at mood : %s" %anime.mood ) 
 
